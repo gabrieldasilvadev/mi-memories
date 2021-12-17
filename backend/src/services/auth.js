@@ -19,4 +19,23 @@ const generateToken = (username) => {
   });
 };
 
-export { authenticate };
+const authenticated = (headers) => {
+  try {
+    const authorization = headers.authorization;
+    const token = authorization.split(' ')[2];
+
+    const decoded = jwt.verify(token, process.env.SECRET, (err, decoded) => {
+      if (err) {
+        throw new Unauthorized('Token invalido');
+      }
+
+      return decoded;
+    });
+
+    return decoded.username;
+  } catch (error) {
+    throw new Unauthorized(error.message || 'Header invalido');
+  }
+};
+
+export { authenticate, authenticated };
