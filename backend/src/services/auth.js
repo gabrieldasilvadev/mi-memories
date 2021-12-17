@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-import { Unauthorized } from './exceptions/HttpRequesError.js';
+import { Unauthorized } from './exceptions/HttpRequestError.js';
 
 const authenticate = (user) => {
   if (user.username != 'gabriel' || user.password != '123') {
