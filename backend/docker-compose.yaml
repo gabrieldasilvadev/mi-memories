@@ -1,17 +1,16 @@
-version: '3.1'
-
-service: 
+version: "3.9"  # optional since v1.27.0
+services:
   db:
     image: postgres
     environment:
       - POSTGRES_DB=stock
       - POSTGRES_USER=adm
       - POSTGRES_PASSWORD=123
-    ports:
+    ports: 
       - "5434:5432"
     volumes:
       - ./database-stock:/db/database
-    adminer:
-      image: adminer
-      ports:
-        - 8080:8080
+  adminer:
+    image: adminer
+    ports: 
+      - 8080:8080
