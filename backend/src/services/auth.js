@@ -15,7 +15,7 @@ const authenticate = (user) => {
 
 const generateToken = (username) => {
   return jwt.sign({ username: username }, process.env.SECRET, {
-    expiresIn: 10000,
+    expiresIn: 1200,
   });
 };
 
@@ -34,7 +34,7 @@ const authenticated = (headers) => {
 
     return decoded.username;
   } catch (error) {
-    throw new Unauthorized(error.message || 'Header invalido');
+    throw new Unauthorized('Token invalido');
   }
 };
 
