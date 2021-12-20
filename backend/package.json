@@ -1,29 +1,29 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projto MiMemories",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon ./src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Gabriel da Silva",
-  "license": "MIT",
   "type": "module",
+  "license": "MIT",
   "devDependencies": {
-    "dotenv": "^10.0.0",
-    "eslint": "^8.4.1",
+    "eslint": "^8.5.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "nodemon": "^2.0.15",
-    "prettier": "2.5.1"
+    "prettier": "2.5.1",
+    "prettier-eslint": "^8.2.2"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "knex": "^0.95.14",
-    "pg": "^8.7.1"
+    "express": "^4.17.2",
+    "handlebars": "^4.7.7",
+    "multer": "^1.4.4",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^6.12.0"
   }
 }

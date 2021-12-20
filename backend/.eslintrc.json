@@ -4,17 +4,17 @@
         "es2021": true,
         "node": true
     },
-    "extends":[
+    "extends": [
       "eslint:recommended",
-      "plugin:prettier/recommended"
-    ],
-    "plugins": [
+      "plugin:prettier/recommended",
       "prettier"
     ],
     "parserOptions": {
         "ecmaVersion": 13,
         "sourceType": "module"
     },
+    "plugins": ["prettier"],
     "rules": {
+      "prettier/prettier": "error"
     }
 }
