@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react';
+import Header from '../Header/index';
 
-function Login() {
+const Login = function () {
   return (
     <section>
       <h1>Pagina de Login</h1>
     </section>
-  )
-}
+  );
+};
 
 export default Login;
